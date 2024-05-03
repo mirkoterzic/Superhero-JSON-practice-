@@ -17,6 +17,18 @@
 
     <section></section>
 
-    <script></script>
+    <script>
+      async function populate() {
+        const requestURL =
+          "https://mirkoterzic.github.io/Superhero-JSON-practice-/superheroes.json";
+        const request = new Request(requestURL);
+
+        const response = await fetch(request);
+        const superheroes = await response.json();
+
+        populateHeader(superheroes);
+        populateHeroes(superheroes);
+      }
+    </script>
   </body>
 </html>
