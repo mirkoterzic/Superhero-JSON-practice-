@@ -42,6 +42,7 @@
       function populateHeroes(obj) {
         const section = document.querySelector("section");
         const heroes = obj.members;
+
         for (const hero of heroes) {
           const myArticle = document.createElement("article");
           const myH2 = document.createElement("h2");
@@ -57,7 +58,7 @@
 
           const superPowers = hero.powers;
           for (const power of superPowers) {
-            const listItem = doucment.createElement("li");
+            const listItem = document.createElement("li");
             listItem.textContent = power;
             myList.appendChild(listItem);
           }
